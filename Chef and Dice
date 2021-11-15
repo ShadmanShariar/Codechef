@@ -1,0 +1,48 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		    Scanner input = new Scanner(System.in);
+
+    
+    long t = input.nextLong();
+    
+    for (long i = 0; i <t; i++) {
+		
+    	long n  = input.nextLong();
+    	
+    	long x = n%4;
+    	long y = n/4;
+    	long a2 = 0 , b3 = 0 , c4  =0 , d5  =0 , e = 0 , f = 0 ;
+    	
+    	if (x==1) {
+    		d5 = 1 ;
+    	}
+        if (x==2) {
+    		c4 = 2 ;
+    	}
+        if (x==3) {
+    		c4 = 2 ;
+    		b3 = 1;
+    	}
+        if (y>0) {
+        	a2+=y*4;
+        	f = (4-x)*4;
+        }
+    	long sum = (a2*11)+(b3*15)+(c4*18)+(d5*20)+f;
+    	System.out.println(sum);
+    	
+	}
+		input.close();
+		
+		System.exit(0);
+	}
+}
